@@ -1,0 +1,3 @@
+# PLUMED: static installation
+set(PLUMED_LOAD  "/usr/local/lib/plumed/obj/kernel.o" "/usr/local/lib/plumed/obj/PlumedStatic.o" -ldl  -lz -lmatheval -ldl   -rdynamic -fopenmp )
+set(PLUMED_DEPENDENCIES  "/usr/local/lib/plumed/obj/kernel.o" "/usr/local/lib/plumed/obj/PlumedStatic.o")

@@ -1,0 +1,372 @@
+./analysis/LandmarkRegister.cpp:31:    for(std::map<std::string,creator_pointer>::iterator p=m.begin();p!=m.end();++p) names+=p->first+" ";
+./analysis/ClassicalScaling.cpp:30:   double half=(-0.5); Matrix<double> distances( half*mymap->modifyDmat() ); 
+./analysis/ClassicalScaling.cpp:51:      for(unsigned j=0;j<mymap->getNumberOfProperties();++j) mymap->setProjectionCoordinate( i, j, sqrt(eigval[n-1-j])*eigvec(n-1-j,i) ); 
+./analysis/Analysis.cpp:235:           if( !first && ((tstep-oldtstep) - getStride()*plumed.getAtoms().getTimeStep())>plumed.getAtoms().getTimeStep() ){
+Binary file ./bias/MetaD.o matches
+Binary file ./bias/UWalls.o matches
+./blas/blas.h:33: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:29: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:121: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:207: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:293: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:384: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:562: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:719: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:819: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:908: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:993: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:1072: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:1165: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:1340: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:1496: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:1685: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:1925:		    if (fabs(temp-1.0)>PLUMED_GMX_DOUBLE_EPS) {
+./blas/blas.cpp:1949:		    if (fabs(temp-1.0)>PLUMED_GMX_DOUBLE_EPS) {
+./blas/blas.cpp:1972: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:2194: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:2424: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:2506: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:2588: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:2681: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:2767: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:2853: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:2945: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:3122: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:3278: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:3376: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:3466: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:3551: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:3630: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:3723: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:3898: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:4052: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:4239: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:4479:		    if ( fabs(temp-1.0)>PLUMED_GMX_FLOAT_EPS) {
+./blas/blas.cpp:4503:		    if ( fabs(temp-1.0)>PLUMED_GMX_FLOAT_EPS) {
+./blas/blas.cpp:4526: * others, as listed in the AUTHORS file in the top-level source
+./blas/blas.cpp:4748: * others, as listed in the AUTHORS file in the top-level source
+./cltools/SimpleMD.cpp:391:  if(istep-write_statistics_last_time_reopened>100){
+Binary file ./cltools/DriverDouble.o matches
+./cltools/SumHills.cpp:202:  keys.addFlag("--help-debug",false,"print special options that can be used to create regtests");
+Binary file ./cltools/DriverFloat.o matches
+Binary file ./cltools/SumHills.o matches
+./cltools/Driver.cpp:152:  //const char *key = p->name;
+./cltools/Driver.cpp:154:  ret = pluginmap.insert ( std::pair<string,unsigned>(string(p->name),plugins.size()) );
+./cltools/Driver.cpp:177:  keys.addFlag("--help-debug",false,"print special options that can be used to create regtests");
+./cltools/Driver.cpp:190:  keys.add("optional","--dump-forces","dump the forces on a file");
+./cltools/Driver.cpp:191:  keys.add("optional","--dump-forces-fmt","( default=%%f ) the format to use to dump the forces");
+./cltools/Driver.cpp:192:  keys.addFlag("--dump-full-virial",false,"with --dump-forces, it dumps the 9 components of the virial");
+./cltools/Driver.cpp:229:  bool printhelpdebug; parseFlag("--help-debug",printhelpdebug);
+./cltools/Driver.cpp:300:  if(!noatoms) parse("--dump-forces",dumpforces);
+./cltools/Driver.cpp:301:  if(dumpforces!="") parse("--dump-forces-fmt",dumpforcesFmt);
+./cltools/Driver.cpp:302:  if(dumpforces!="") parseFlag("--dump-full-virial",dumpfullvirial);
+./core/GREX.cpp:180:  localDeltaBias+=localUSwap-localUNow;
+Binary file ./core/ActionWithVirtualAtom.o matches
+./core/ActionRegister.cpp:35:    for(mIterator p=m.begin();p!=m.end();++p)names+=p->first+" ";
+./core/CLToolRegister.cpp:35:    for(mIterator p=m.begin();p!=m.end();++p)names+=p->first+" ";
+Binary file ./core/PlumedMain.o matches
+Binary file ./core/Atoms.o matches
+./core/Atoms.cpp:208:      if(dd.g2l[p->index()]>=0){
+./core/Atoms.cpp:209:        dd.indexToBeSent[count]=p->index();
+./core/Atoms.cpp:210:        dd.positionsToBeSent[ndata*count+0]=positions[p->index()][0];
+./core/Atoms.cpp:211:        dd.positionsToBeSent[ndata*count+1]=positions[p->index()][1];
+./core/Atoms.cpp:212:        dd.positionsToBeSent[ndata*count+2]=positions[p->index()][2];
+./core/Atoms.cpp:214:          dd.positionsToBeSent[ndata*count+3]=masses[p->index()];
+./core/Atoms.cpp:215:          dd.positionsToBeSent[ndata*count+4]=charges[p->index()];
+./crystallization/Fccubic.cpp:177:         t3 = (2*tmp-alpha*x4*y4*z4/r12)/d2;         
+./function/Piecewise.cpp:145:      double m=(points[p].second-points[p-1].second) / (points[p].first-points[p-1].first);
+./function/Piecewise.cpp:146:      f=m*(val-points[p-1].first)+points[p-1].second;
+./function/FuncSumHills.cpp:457:		biasrep->setRescaledToBias(true);
+./function/FuncSumHills.cpp:502:		if(nohistory){biasrep->clear();log<<"  clearing history before reading a new block\n";}; 
+./function/FuncSumHills.cpp:508:		if(nohistory){historep->clear();log<<"  clearing history before reading a new block\n";}; 
+./function/FuncSumHills.cpp:520:             		Grid biasGrid=*(biasrep->getGridPtr());
+./function/FuncSumHills.cpp:539:             		Grid histoGrid=*(historep->getGridPtr());
+./function/FuncSumHills.cpp:562:	                Grid biasGrid=*(biasrep->getGridPtr());
+./function/FuncSumHills.cpp:581:	                Grid histoGrid=*(historep->getGridPtr());
+Binary file ./function/FuncSumHills.o matches
+Binary file ./generic/WholeMolecules.o matches
+./generic/FitToTemplate.cpp:77:DUMPATOMS FILE=dump-before.xyz ATOMS=1-20
+./generic/FitToTemplate.cpp:79:DUMPATOMS FILE=dump-after.xyz ATOMS=1-20
+./generic/WholeMolecules.cpp:79:# DUMPATOMS FILE=dump-broken.xyz ATOMS=1-20
+Binary file ./generic/EffectiveEnergyDrift.o matches
+./lapack/lapack.cpp:30: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:343: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:942: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:1065: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:1221: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:1323: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:1461: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:1535: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:1672: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:2143: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:2207:    if( fabs(a[(j-1)*(*lda)+(jp-1)])>PLUMED_GMX_DOUBLE_MIN ) {
+./lapack/lapack.cpp:2209:	PLUMED_BLAS_F77_FUNC(dswap,DSWAP)(n,&(a[ j-1 ]),lda,&(a[ jp-1 ]),lda);
+./lapack/lapack.cpp:2238: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:2356: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:2524: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:2617: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:2903: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:2977: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:3069: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:3412: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:3659: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:3788: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:3937: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:4212: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:4311: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:4422: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:4535: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:4691: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:4761: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:5045: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:5124: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:5560: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:5687: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:5855: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:5950: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:6327: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:6760: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:6889: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:7296: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:7419: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:7552: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:7652: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:7829: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:8024: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:8174: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:8522: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:8799: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:9553: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:9666: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:9822: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:10125: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:10318: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:10613: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:10849: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:10934: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:11013: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:11134: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:11587: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:11834: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:12156: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:12350: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:12526: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:12603:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12618:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12636:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12651:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12669:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12684:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12705:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12720:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12738:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12753:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12771:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12786:		    if (fabs(ctemp-1.0)>PLUMED_GMX_DOUBLE_EPS || fabs(stemp)>PLUMED_GMX_DOUBLE_MIN) {
+./lapack/lapack.cpp:12813: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:13047: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:13290: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:13362: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:13546: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:13650: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:13848: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:13953: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:14062: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:14183: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:14365: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:14542: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:14669: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:14798: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:14967: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:15069: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:15257: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:15418: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:15593: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:15731: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:16250: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:16510: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:16801: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:17268: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:17623: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:17706: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:18039: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:18176: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:18367: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:18478: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:18619: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:18860: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:19173: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:19772: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:19896: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:20052: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:20154: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:20292: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:20366: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:20503: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:20972: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:21036:    if( fabs(a[(j-1)*(*lda)+(jp-1)])>PLUMED_GMX_FLOAT_MIN ) {
+./lapack/lapack.cpp:21038:	PLUMED_BLAS_F77_FUNC(sswap,SSWAP)(n,&(a[ j-1 ]),lda,&(a[ jp-1 ]),lda);
+./lapack/lapack.cpp:21067: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:21185: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:21353: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:21446: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:21732: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:21806: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:21898: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:22241: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:22488: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:22617: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:22766: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:23041: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:23140: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:23251: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:23364: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:23520: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:23590: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:23874: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:23953: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:24389: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:24516: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:24684: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:24779: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:25156: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:25589: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:25718: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:26125: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:26248: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:26381: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:26481: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:26658: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:26853: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:27003: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:27351: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:27628: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:28382: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:28495: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:28651: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:28954: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:29147: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:29442: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:29678: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:29763: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:29842: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:29963: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:30416: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:30663: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:30985: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:31179: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:31355: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:31432:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31447:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31465:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31480:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31498:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31513:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31534:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31549:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31567:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31582:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31600:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31615:		    if (fabs(ctemp-1.0)>PLUMED_GMX_FLOAT_EPS || fabs(stemp)>PLUMED_GMX_FLOAT_MIN) {
+./lapack/lapack.cpp:31642: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:31876: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:32119: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:32191: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:32375: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:32479: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:32677: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:32782: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:32891: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:33012: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:33194: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:33371: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:33498: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:33627: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:33796: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:33898: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:34086: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:34247: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:34422: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:34560: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:35079: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:35339: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:35630: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:36097: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:36452: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:36535: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:36868: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:37005: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:37196: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.cpp:37307: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack.h:34: * others, as listed in the AUTHORS file in the top-level source
+./lapack/lapack_limits.h:31: * others, as listed in the AUTHORS file in the top-level source
+Binary file ./lib/install/plumed matches
+Binary file ./lib/install/libplumedKernel.so matches
+Binary file ./lib/install/kernel.o matches
+Binary file ./lib/install/libplumed.so matches
+Binary file ./lib/plumed matches
+Binary file ./lib/libplumedKernel.so matches
+Binary file ./lib/libplumed.so matches
+./main/main.cpp:47:  p->cmd("CLTool setArgc",&argc);
+./main/main.cpp:48:  p->cmd("CLTool setArgv",argv);
+./main/main.cpp:53:    p->cmd("CLTool setMPIComm",&comm);
+./main/main.cpp:56:  p->cmd("CLTool run",&ret);
+Binary file ./mapping/SpathVessel.o matches
+./mapping/ZpathVessel.cpp:57:  invlambda = 1.0 / mymap->getLambda(); usetol=true;
+./mapping/Mapping.cpp:66:     mymap->setPropertyNames( property, false );
+./mapping/Mapping.cpp:70:     mymap->setPropertyNames( property, true );
+./mapping/Mapping.cpp:88:        mymap->readFrame( mypdb ); ww=mymap->getWeight( nfram ); 
+./mapping/Mapping.cpp:100:  mymap->setWeights( weights );
+./mapping/Mapping.cpp:105:  mymap->getAtomAndArgumentRequirements( atoms, args );
+./mapping/Mapping.cpp:109:  mymap->duplicateFrameList(); 
+./mapping/Mapping.cpp:111:  plumed_assert( !mymap->mappingNeedsSetup() );
+./mapping/Mapping.cpp:113:  // mymap->setNumberOfAtomsAndArguments( atoms.size(), args.size() );
+./mapping/Mapping.cpp:132:  if( mymap->mappingNeedsSetup() ){
+./mapping/Mapping.cpp:135:      mymap->getAtomAndArgumentRequirements( atoms, args );
+./mapping/Mapping.cpp:139:      mymap->duplicateFrameList();
+./mapping/Mapping.cpp:143:      plumed_assert( !mymap->mappingNeedsSetup() );
+./mapping/Mapping.cpp:145:      // mymap->setNumberOfAtomsAndArguments( atoms.size(), args.size() );
+./mapping/Mapping.cpp:152:  return mymap->getPropertyIndex( name );
+./mapping/Mapping.cpp:170:   ReferenceConfiguration* myref=mymap->getFrame(ifunc); mypack.setValIndex(0);
+./mapping/Mapping.cpp:181:  double dd = mymap->calcDistanceFromConfiguration( ifunc, getPositions(), getPbc(), getArguments(), myder, squared );     
+./mapping/Mapping.cpp:194:  return mymap->getFrame( ifunc );
+Binary file ./mapping/Mapping.o matches
+./mapping/SpathVessel.cpp:61:  mycoordnumber=mymap->getPropertyIndex( getLabel() ); 
+./mapping/SpathVessel.cpp:64:  for(unsigned i=0;i<mymap->getFullNumberOfTasks();++i){
+./mapping/SpathVessel.cpp:65:     if( mymap->getTaskCode(i)!=mymap->getPositionInFullTaskList(i) ) error("mismatched tasks and codes");
+./mapping/SpathVessel.cpp:78:  double pp=mymap->getPropertyValue( current, mycoordnumber ), weight=myvals.get(0);
+./mapping/Mapping.h:101:  return mymap->getNumberOfMappedPoints();   
+./mapping/Mapping.h:125:  return mymap->getNumberOfProperties();   
+./mapping/Mapping.h:130:  return mymap->getPropertyName(iprop);  
+./mapping/Mapping.h:136:  return mymap->getPropertyValue( cur, iprop ); 
+./mapping/Mapping.h:141:  return mymap->getWeight( current ); 
+./mapping/Mapping.h:149:  mymap->copyFrameDerivatives( ifunc, storef );
+./molfile/Gromacs.h:352:		for (p = (char *) &fn[strlen(fn) - 1]; *p != '.' && p > fn; p--);
+./molfile/dcdplugin.cpp:191: *               *freeind may be set to heap-allocated space
+./molfile/vmdplugin.h:213: * or heap-allocated memory and should never be later modified by the plugin.
+Binary file ./multicolvar/Bridge.o matches
+Binary file ./multicolvar/Angles.o matches
+Binary file ./multicolvar/AlphaBeta.o matches
+Binary file ./multicolvar/DihedralCorrelation.o matches
+Binary file ./reference/ReferenceArguments.o matches
+./reference/MetricRegister.cpp:30:    for(std::map<std::string,creator_pointer>::iterator p=m.begin();p!=m.end();++p) names+=p->first+" ";
+Binary file ./reference/MahalanobisDistance.o matches
+Binary file ./reference/RMSDBase.o matches
+Binary file ./secondarystructure/AlphaRMSD.o matches
+./tools/RMSD.cpp:1135:  for(unsigned iat=0;iat<n;iat++) v[iat]=(positions[iat]-cp-csum)*align[iat];
+./tools/NeighborList.cpp:132:  p = std::find(requestlist_.begin(), requestlist_.end(), index0); plumed_assert(p!=requestlist_.end()); newindex0=p-requestlist_.begin();
+./tools/NeighborList.cpp:133:  p = std::find(requestlist_.begin(), requestlist_.end(), index1); plumed_assert(p!=requestlist_.end()); newindex1=p-requestlist_.begin();
+./tools/Tools.cpp:235:    size_t dash=p->find("-");
+./tools/Tools.cpp:238:    if(!Tools::convert(p->substr(0,dash),first)) continue;
+./tools/Tools.cpp:241:    size_t colon=p->substr(dash+1).find(":");
+./tools/Tools.cpp:243:      if(!Tools::convert(p->substr(dash+1).substr(0,colon),second) ||
+./tools/Tools.cpp:244:         !Tools::convert(p->substr(dash+1).substr(colon+1),stride)) continue;
+./tools/Tools.cpp:246:      if(!Tools::convert(p->substr(dash+1),second)) continue;
+Binary file ./tools/IFile.o matches
+./tools/PDB.cpp:72:  else return atomsymb[p->second];
+./tools/PDB.cpp:79:  else return residue[p->second];
+./tools/PDB.cpp:86:  else return residuenames[p->second];
+Binary file ./vesselbase/ValueVessel.o matches
+Binary file ./vesselbase/LessThan.o matches
+Binary file ./vesselbase/Lowest.o matches
+./vesselbase/VesselRegister.cpp:32:    for(std::map<std::string,creator_pointer>::iterator p=m.begin();p!=m.end();++p) names+=p->first+" ";

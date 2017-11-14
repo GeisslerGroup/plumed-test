@@ -1,0 +1,8 @@
+#! /bin/bash
+echo 'NOTE: shell only version, useful when plumed is cross compiled' >&2
+export PLUMED_IS_INSTALLED=no
+export PLUMED_ROOT="${PLUMED_ROOT-/home/pratima/Downloads/plumed-test}"
+export PLUMED_INCLUDEDIR="${PLUMED_ROOT}/include"
+export PLUMED_HTMLDIR="${PLUMED_ROOT}"
+export PLUMED_PROGRAM_NAME=plumed
+source "$PLUMED_ROOT"/scripts/newcv.sh

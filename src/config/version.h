@@ -1,0 +1,3 @@
+#define PLUMED_VERSION_SHORT "2.2"
+#define PLUMED_VERSION_LONG "2.2.3"
+#define PLUMED_VERSION_GIT "Unknown"

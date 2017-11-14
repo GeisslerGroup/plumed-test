@@ -1,0 +1,8 @@
+#! /bin/bash
+echo 'NOTE: shell only version, useful when plumed is cross compiled' >&2
+export PLUMED_IS_INSTALLED=yes
+export PLUMED_ROOT="${PLUMED_ROOT-/usr/local/lib/plumed}"
+export PLUMED_INCLUDEDIR="${PLUMED_INCLUDEDIR-/usr/local/include}"
+export PLUMED_HTMLDIR="${PLUMED_HTMLDIR=/usr/local/share/doc/plumed}"
+export PLUMED_PROGRAM_NAME="${PLUMED_PROGRAM_NAME-plumed}"
+source "$PLUMED_ROOT"/scripts/mklib.sh
