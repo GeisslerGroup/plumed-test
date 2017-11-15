@@ -1,3 +1,0 @@
-# PLUMED: shared installation
-PLUMED_LOAD= /home/pratima/Downloads/plumed-test/src/lib/libplumed.so -ldl
-PLUMED_DEPENDENCIES= /home/pratima/Downloads/plumed-test/src/lib/libplumed.so

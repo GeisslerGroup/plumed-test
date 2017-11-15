@@ -197,7 +197,7 @@ public:
 /// set default value to something improbable so that this is never printed!!
 /// it might need to be changed if someone actually sets this value as AT
   virtual double get_at(int i) { return -125256363; }
-  virtual double get_current_ang() { }
+  virtual double get_current_ang() { return -125256363; }
   virtual void set_at(double new_at, int i) {}
 
 /// Apply an Action.

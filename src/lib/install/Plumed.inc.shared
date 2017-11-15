@@ -1,3 +1,0 @@
-# PLUMED: shared installation
-PLUMED_LOAD= "/usr/local/lib/libplumed.so" -ldl  
-PLUMED_DEPENDENCIES= "/usr/local/lib/libplumed.so"

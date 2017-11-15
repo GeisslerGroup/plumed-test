@@ -1,6 +1,0 @@
-set(PLUMED_RUNTIME_LOAD  "/usr/local/lib/plumed/obj/Plumed.o" -ldl  )
-set(PLUMED_STATIC_LOAD  "/usr/local/lib/plumed/obj/kernel.o" "/usr/local/lib/plumed/obj/PlumedStatic.o" -ldl  -lz -lmatheval -ldl   -rdynamic -fopenmp )
-set(PLUMED_SHARED_LOAD  "/usr/local/lib/libplumed.so" -ldl  )
-set(PLUMED_RUNTIME_DEPENDENCIES )
-set(PLUMED_STATIC_DEPENDENCIES  "/usr/local/lib/plumed/obj/kernel.o" "/usr/local/lib/plumed/obj/PlumedStatic.o")
-set(PLUMED_SHARED_DEPENDENCIES  "/usr/local/lib/libplumed.so")

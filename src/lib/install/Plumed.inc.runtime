@@ -1,3 +1,0 @@
-# PLUMED: runtime installation
-PLUMED_LOAD= "/usr/local/lib/plumed/obj/Plumed.o" -ldl  
-PLUMED_DEPENDENCIES=

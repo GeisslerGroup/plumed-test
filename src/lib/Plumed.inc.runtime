@@ -1,3 +1,0 @@
-# PLUMED: runtime installation
-PLUMED_LOAD= /home/pratima/Downloads/plumed-test/src/wrapper/Plumed.o -ldl
-PLUMED_DEPENDENCIES=
