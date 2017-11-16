@@ -71,6 +71,11 @@ public:
   std::vector<double> at;
   void calculate();
   static void registerKeywords(Keywords& keys);
+
+  // ***CHANGED***
+  // new functions to return bias centre, current value of argument
+  // and to set a new bias centre
+  // actually only set_at() is used
   double get_at(int i) {
     return at[i];
   }
@@ -128,6 +133,8 @@ slope(getNumberOfArguments(),0.0)
 void Restraint::calculate(){
   double ene=0.0;
   double totf2=0.0;
+  // ***CHANGED***
+  // new line to update variable declared in PlumedMain.cpp
   plumed.curr_ang = getArgument(0);
 //   log << "results of setting curr_ang: " << plumed.curr_ang << "\n";
 //   log.printf("# Arguments %f \n", getNumberOfArguments());
@@ -147,6 +154,9 @@ void Restraint::calculate(){
 
   valueBias->set(ene);
   valueForce2->set(totf2);
+
+  // ***CHANGED***
+  // new line to update variable declared in PlumedMain.cpp
   plumed.centre = at[0];
 }
 
