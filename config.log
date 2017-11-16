@@ -335,7 +335,7 @@ configure:5427: $? = 0
 configure:5427: result: yes
 configure:5454: checking for dgemv
 configure:5454: mpic++ -o conftest -O -fPIC -Wall -pedantic -ansi   conftest.cpp  >&5
-/tmp/cc5P3dP1.o: In function `main':
+/tmp/cc07WgjZ.o: In function `main':
 conftest.cpp:(.text+0x5): undefined reference to `dgemv'
 collect2: error: ld returned 1 exit status
 configure:5454: $? = 1
@@ -399,7 +399,7 @@ configure: failed program was:
 configure:5454: result: no
 configure:5459: checking for dgemv_
 configure:5459: mpic++ -o conftest -O -fPIC -Wall -pedantic -ansi   conftest.cpp  >&5
-/tmp/ccnoU1ES.o: In function `main':
+/tmp/cczkzWL1.o: In function `main':
 conftest.cpp:(.text+0x5): undefined reference to `dgemv_'
 collect2: error: ld returned 1 exit status
 configure:5459: $? = 1
@@ -700,7 +700,7 @@ configure:5882: checking for matheval.h
 configure:5882: result: yes
 configure:5885: checking for evaluator_create
 configure:5885: mpic++ -o conftest -O -fPIC -Wall -pedantic -ansi   conftest.cpp -ldl  >&5
-/tmp/ccPWithR.o: In function `main':
+/tmp/ccfZJp8N.o: In function `main':
 conftest.cpp:(.text+0x5): undefined reference to `evaluator_create'
 collect2: error: ld returned 1 exit status
 configure:5885: $? = 1
@@ -856,7 +856,7 @@ configure:6134: checking for zlib.h
 configure:6134: result: yes
 configure:6137: checking for gzopen
 configure:6137: mpic++ -o conftest -O -fPIC -Wall -pedantic -ansi   conftest.cpp -lmatheval -ldl  >&5
-/tmp/ccLVFKfi.o: In function `main':
+/tmp/ccLQeF7f.o: In function `main':
 conftest.cpp:(.text+0x5): undefined reference to `gzopen'
 collect2: error: ld returned 1 exit status
 configure:6137: $? = 1

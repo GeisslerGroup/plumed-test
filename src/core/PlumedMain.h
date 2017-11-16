@@ -124,11 +124,6 @@ private:
 /// This computed by accumulating the change in external potentials.
   double work;
 
-/// ***CHANGED***
-/// The bias centre.
-/// This returns the bias centre
-  double at;
-
 /// Class of possible exchange patterns, used for BIASEXCHANGE but also for future parallel tempering
   ExchangePatterns& exchangePatterns;
 
@@ -151,6 +146,14 @@ public:
 
 /// Flag to switch on detailed timers
   bool detailedTimers;
+
+/// ***CHANGED***
+/// The bias centre.
+/// This returns the bias centre
+  double centre;
+/// the current value of the argument
+  double curr_ang;
+
 
 /// Add a citation, returning a string containing the reference number, something like "[10]"
   std::string cite(const std::string&);
@@ -242,7 +245,7 @@ public:
 
 /// ***CHANGED***
   void setAt(void*);
-  double getAt();
+  double getCentre();
   double getCurrentAng();
 
 /**

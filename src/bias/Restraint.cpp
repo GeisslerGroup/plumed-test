@@ -121,12 +121,15 @@ slope(getNumberOfArguments(),0.0)
   addComponent("force2"); componentIsNotPeriodic("force2");
   valueBias=getPntrToComponent("bias");
   valueForce2=getPntrToComponent("force2");
+
 }
 
 
 void Restraint::calculate(){
   double ene=0.0;
   double totf2=0.0;
+  plumed.curr_ang = getArgument(0);
+//   log << "results of setting curr_ang: " << plumed.curr_ang << "\n";
 //   log.printf("# Arguments %f \n", getNumberOfArguments());
   for(unsigned i=0;i<getNumberOfArguments();++i){
 //     log.printf("getArgument has index %d \n", i);
@@ -140,10 +143,11 @@ void Restraint::calculate(){
     totf2+=f*f;
 //     set_at(0.90, 0);
 //     log.printf("getArgument returns %f \n", getArgument(i));
-    log.printf("potato is at %f \n",at[i]);
   };
+
   valueBias->set(ene);
   valueForce2->set(totf2);
+  plumed.centre = at[0];
 }
 
 // std::vector<double> Restraint::get_at(){

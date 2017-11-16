@@ -15,7 +15,8 @@ Bias.o: Bias.cpp Bias.h core/ActionPilot.h core/../../core/ActionPilot.h \
  core/../../core/tools/../../tools/OFile.h \
  core/../../core/tools/../../tools/FileBase.h core/ActionWithValue.h \
  core/../../core/ActionWithValue.h core/ActionWithArguments.h \
- core/../../core/ActionWithArguments.h
+ core/../../core/ActionWithArguments.h core/PlumedMain.h \
+ core/../../core/PlumedMain.h core/../../core/WithCmd.h
 Bias.cpp:
 Bias.h:
 core/ActionPilot.h:
@@ -43,3 +44,6 @@ core/ActionWithValue.h:
 core/../../core/ActionWithValue.h:
 core/ActionWithArguments.h:
 core/../../core/ActionWithArguments.h:
+core/PlumedMain.h:
+core/../../core/PlumedMain.h:
+core/../../core/WithCmd.h:

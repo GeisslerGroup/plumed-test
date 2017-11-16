@@ -1,3 +1,3 @@
 #define PLUMED_VERSION_SHORT "2.2"
 #define PLUMED_VERSION_LONG "2.2.3"
-#define PLUMED_VERSION_GIT "8c77ca2-dirty"
+#define PLUMED_VERSION_GIT "9a82623-dirty"

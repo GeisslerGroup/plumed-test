@@ -47,7 +47,7 @@
 
 using namespace std;
 
-enum { SETBOX, SETPOSITIONS, SETMASSES, SETCHARGES, SETPOSITIONSX, SETPOSITIONSY, SETPOSITIONSZ, SETVIRIAL, SETENERGY, SETFORCES, SETFORCESX, SETFORCESY, SETFORCESZ, CALC, PREPAREDEPENDENCIES, SHAREDATA, PREPARECALC, PERFORMCALC, SETSTEP, SETSTEPLONG, SETATOMSNLOCAL, SETATOMSGATINDEX, SETATOMSFGATINDEX, SETATOMSCONTIGUOUS, CREATEFULLLIST, GETFULLLIST, CLEARFULLLIST, READ, CLEAR, GETAPIVERSION, INIT, SETREALPRECISION, SETMDLENGTHUNITS, SETMDENERGYUNITS, SETMDTIMEUNITS, SETNATURALUNITS, SETNOVIRIAL, SETPLUMEDDAT, SETMPICOMM, SETMPIFCOMM, SETMPIMULTISIMCOMM, SETNATOMS, SETTIMESTEP, SETMDENGINE, SETLOG, SETLOGFILE, SETSTOPFLAG, GETEXCHANGESFLAG, SETEXCHANGESSEED, SETNUMBEROFREPLICAS, GETEXCHANGESLIST, RUNFINALJOBS, ISENERGYNEEDED, GETBIAS, SETKBT, SETRESTART, SETAT, GETAT, GETCURRENTANG };
+enum { SETBOX, SETPOSITIONS, SETMASSES, SETCHARGES, SETPOSITIONSX, SETPOSITIONSY, SETPOSITIONSZ, SETVIRIAL, SETENERGY, SETFORCES, SETFORCESX, SETFORCESY, SETFORCESZ, CALC, PREPAREDEPENDENCIES, SHAREDATA, PREPARECALC, PERFORMCALC, SETSTEP, SETSTEPLONG, SETATOMSNLOCAL, SETATOMSGATINDEX, SETATOMSFGATINDEX, SETATOMSCONTIGUOUS, CREATEFULLLIST, GETFULLLIST, CLEARFULLLIST, READ, CLEAR, GETAPIVERSION, INIT, SETREALPRECISION, SETMDLENGTHUNITS, SETMDENERGYUNITS, SETMDTIMEUNITS, SETNATURALUNITS, SETNOVIRIAL, SETPLUMEDDAT, SETMPICOMM, SETMPIFCOMM, SETMPIMULTISIMCOMM, SETNATOMS, SETTIMESTEP, SETMDENGINE, SETLOG, SETLOGFILE, SETSTOPFLAG, GETEXCHANGESFLAG, SETEXCHANGESSEED, SETNUMBEROFREPLICAS, GETEXCHANGESLIST, RUNFINALJOBS, ISENERGYNEEDED, GETBIAS, SETKBT, SETRESTART, SETAT, GETCENTRE, GETCURRENTANG };
 
 namespace PLMD{
 
@@ -67,6 +67,9 @@ PlumedMain::PlumedMain():
   actionSet(*new ActionSet(*this)),
   bias(0.0),
   work(0.0),
+  // ***CHANGED***
+  centre(100.0),
+  curr_ang(-100.0),
   exchangePatterns(*new(ExchangePatterns)),
   exchangeStep(false),
   restart(false),
@@ -136,7 +139,7 @@ PlumedMain::PlumedMain():
   word_map["setKbT"]=SETKBT;
   word_map["setRestart"]=SETRESTART;
   word_map["setAt"]=SETAT;
-  word_map["getAt"]=GETAT;
+  word_map["getCentre"]=GETCENTRE;
   word_map["getCurrentAng"]=GETCURRENTANG;
 }
 
@@ -448,13 +451,15 @@ void PlumedMain::cmd(const std::string & word,void*val){
         CHECK_NULL(val,word);
         setAt(val);
         break;
-      case GETAT:
+      case GETCENTRE:
         CHECK_INIT(initialized, word);
-        getAt();
+        d = getCentre();
+        atoms.double2MD(d,val);
         break;
       case GETCURRENTANG:
         CHECK_INIT(initialized, word);
-        getCurrentAng();
+        d = getCurrentAng();
+        atoms.double2MD(d,val);
         break;
       default:
         plumed_merror("cannot interpret cmd(\"" + word + "\"). check plumed developers manual to see the available commands.");
@@ -709,29 +714,33 @@ void PlumedMain::setAt(void* new_at_val){
 }
 
 /// ***CHANGED***
-double PlumedMain::getAt(){
-// calculate the active actions in order (assuming *backward* dependence)
-   for(ActionSet::iterator p=actionSet.begin();p!=actionSet.end();++p){
-      // set at value if action is active
-      if((*p)->isActive()){
-        log << "getAt returns : " << (*p)->get_at(0) << "\n";
-        return (*p)->get_at(0) ;
-      }
-  }
+double PlumedMain::getCentre(){
+  log << "new func for at returns: " << centre << "\n";
+  return centre;
+// // calculate the active actions in order (assuming *backward* dependence)
+//    for(ActionSet::iterator p=actionSet.begin();p!=actionSet.end();++p){
+//       // set at value if action is active
+//       if((*p)->isActive()){
+//         log << "getAt returns : " << (*p)->get_at(0) << "\n";
+//         return (*p)->get_at(0) ;
+//       }
+//   }
 }
 
 /// ***CHANGED***
 double PlumedMain::getCurrentAng(){
-// calculate the active actions in order (assuming *backward* dependence)
-   for(ActionSet::iterator p=actionSet.begin();p!=actionSet.end();++p){
-      // set at value if action is active
-      if((*p)->isActive()){
-        if ((*p)->get_at(0) != -125256363) {
-          log << "getCurrentAng returns : " << (*p)->get_current_ang() << "\n"; 
-          return (*p)->get_current_ang() ;
-        }
-      }
-  }
+  log << "new func for current angle returns: " << curr_ang << "\n";
+  return curr_ang;
+// // calculate the active actions in order (assuming *backward* dependence)
+//    for(ActionSet::iterator p=actionSet.begin();p!=actionSet.end();++p){
+//       // set at value if action is active
+//       if((*p)->isActive()){
+//         if ((*p)->get_at(0) != -125256363) {
+//           log << "getCurrentAng returns : " << (*p)->get_current_ang() << "\n"; 
+//           return (*p)->get_current_ang() ;
+//         }
+//       }
+//   }
 }
 
 void PlumedMain::justApply(){
@@ -823,6 +832,7 @@ void PlumedMain::load(const std::string& ss){
 }
 
 double PlumedMain::getBias() const{
+  log <<"bias is at : " << bias << "\n";
   return bias;
 }
 

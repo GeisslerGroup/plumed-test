@@ -25,6 +25,7 @@
 #include "core/ActionPilot.h"
 #include "core/ActionWithValue.h"
 #include "core/ActionWithArguments.h"
+#include "core/PlumedMain.h"
 
 #define PLUMED_BIAS_INIT(ao) Action(ao),Bias(ao)
 

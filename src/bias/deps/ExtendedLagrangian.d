@@ -16,11 +16,11 @@ ExtendedLagrangian.o: ExtendedLagrangian.cpp Bias.h core/ActionPilot.h \
  core/../../core/tools/../../tools/OFile.h \
  core/../../core/tools/../../tools/FileBase.h core/ActionWithValue.h \
  core/../../core/ActionWithValue.h core/ActionWithArguments.h \
- core/../../core/ActionWithArguments.h ActionRegister.h \
+ core/../../core/ActionWithArguments.h core/PlumedMain.h \
+ core/../../core/PlumedMain.h core/../../core/WithCmd.h ActionRegister.h \
  core/ActionRegister.h core/../../core/ActionRegister.h tools/Random.h \
- tools/../../tools/Random.h core/PlumedMain.h \
- core/../../core/PlumedMain.h core/../../core/WithCmd.h core/Atoms.h \
- core/../../core/Atoms.h core/../../core/tools/Communicator.h \
+ tools/../../tools/Random.h core/Atoms.h core/../../core/Atoms.h \
+ core/../../core/tools/Communicator.h \
  core/../../core/tools/../../tools/Communicator.h \
  /usr/lib/openmpi/include/mpi.h \
  /usr/lib/openmpi/include/mpi_portable_platform.h \
@@ -95,14 +95,14 @@ core/ActionWithValue.h:
 core/../../core/ActionWithValue.h:
 core/ActionWithArguments.h:
 core/../../core/ActionWithArguments.h:
+core/PlumedMain.h:
+core/../../core/PlumedMain.h:
+core/../../core/WithCmd.h:
 ActionRegister.h:
 core/ActionRegister.h:
 core/../../core/ActionRegister.h:
 tools/Random.h:
 tools/../../tools/Random.h:
-core/PlumedMain.h:
-core/../../core/PlumedMain.h:
-core/../../core/WithCmd.h:
 core/Atoms.h:
 core/../../core/Atoms.h:
 core/../../core/tools/Communicator.h:
